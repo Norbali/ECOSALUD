@@ -115,19 +115,19 @@
                 <li class="nav-item">
                     <a data-bs-toggle="collapse" href="#tipotanque">
                         <i class="fas fa-th-large"></i>
-                        <p>Tipo de tanques</p>
+                        <p>Tipos de tanques</p>
                         <span class="caret"></span>
                     </a>
                     <div class="collapse" id="tipotanque">
                         <ul class="nav nav-collapse">
                             <li>
                                 <a href="sidebar-style-2.html">
-                                    <span class="sub-item">Sidebar Style 2</span>
+                                    <span class="sub-item">Registro de tipos de tanques </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="icon-menu.html">
-                                    <span class="sub-item">Icon Menu</span>
+                                    <span class="sub-item">Consultar Tipos de Tanques</span>
                                 </a>
                             </li>
                         </ul>
