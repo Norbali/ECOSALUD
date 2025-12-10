@@ -242,7 +242,7 @@
                             </li>
                             <li>
                                 <a href="<?php echo getUrl("ReportesNacidosMuertos","ReportesNacidosMuertos","getConsulta")?>">
-                                    <span class="sub-item">Nacidos o muertos </span>
+                                    <span class="sub-item">Peces Nacidos y muertos </span>
                                 </a>
                             </li>
                             <li>

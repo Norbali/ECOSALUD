@@ -1,7 +1,7 @@
 <!-- Filtros -->
 <div class="card">
     <div class="card-header">
-        <h4 class="card-title">Filtros Reporte Nacidos Muertos peces</h4>
+        <h4 class="card-title">Filtros Reporte Peces Nacidos y Muertos</h4>
     </div>
 
     <div class="card-body">

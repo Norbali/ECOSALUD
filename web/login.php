@@ -15,9 +15,12 @@
     <div class="wrapper wrapper-login">
         <div class="container container-login animated fadeIn">
             <h3 class="text-center">Iniciar Sesión</h3>
-            <a href="index.html" class="mt-3">
-                <img src="assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20">
-            </a>
+            <div class="text-center">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="120">
+                </a>
+            </div>
+
             <form>
                 <div class="form-group">
                     <label class=""><b>Usuario</b></label>
@@ -29,8 +32,10 @@
                     <input type="password" class="form-control">
                 </div>
 
-                <button class="btn btn-primary btn-block mt-3">Entrar</button>
-            </form>
+                <div class="text-center">
+                     <button class="btn btn-primary btn-block mt-3">Entrar</button>
+                </div>
+                </form>
         </div>
     </div>
 
