@@ -1,6 +1,6 @@
 <div class="sidebar" data-background-color="dark">
     <div class="sidebar-logo">
-        <!-- Logo Header -->
+        <!-- Logo  -->
         <div class="logo-header" data-background-color="dark">
 
             <a href="index.html" class="logo">
@@ -158,10 +158,9 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#usuarios">
+                    <a href="<?php echo getUrl("RegistroUsuarios","RegistroUsuarios","getCreate")?>">
                         <i class="fas fa-user"></i>
                         <p>Registro de usuarios</p>
-                        <span class="caret"></span>
                     </a>
                     <div class="collapse" id="usuarios">
                         <ul class="nav nav-collapse">
@@ -209,13 +208,18 @@
                     <div class="collapse" id="reportes">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="charts/charts.html">
-                                    <span class="sub-item">Chart Js</span>
+                                <a href="<?php echo getUrl("ReporteSeguimientoActividades","ReporteSeguimientoActividades","getConsulta")?>">
+                                    <span class="sub-item">Seguimiento de actividades</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo getUrl("ReportesNacidosMuertos","ReportesNacidosMuertos","getConsulta")?>">
+                                    <span class="sub-item">Nacidos o muertos </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="charts/sparkline.html">
-                                    <span class="sub-item">Sparkline</span>
+                                    <span class="sub-item">Tanques por zoocriadero</span>
                                 </a>
                             </li>
                         </ul>
