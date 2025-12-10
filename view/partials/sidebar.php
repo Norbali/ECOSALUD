@@ -209,7 +209,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../view/partials/autores.php">
+                                <a href="<?php echo getUrl("Autores","Autores","getMostrarAutores")?>">
                                     <span class="sub-item">Autores</span>
                                 </a>
                             </li>
@@ -242,13 +242,6 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#info">
-                        <i class="fas fa-info"></i>
-                        <p>Autores</p>
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
 </div>
