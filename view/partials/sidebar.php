@@ -189,32 +189,32 @@
                     <div class="collapse" id="configuracion">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="charts/charts.html">
+                                <a href="../view/partials/actualizarInformacion.php">
                                     <span class="sub-item">Actualizar Información</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="charts/sparkline.html">
+                                <a href="../view/partials/manualDeUsuario.php">
                                     <span class="sub-item">Manual de Usuario</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="charts/charts.html">
+                                <a href="../view/partials/manualDeInstalacion.php">
                                     <span class="sub-item">Manual de Instalación</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="charts/charts.html">
+                                <a href="../view/partials/manualDeSistema.php">
                                     <span class="sub-item">Manual de Sistema</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="charts/charts.html">
+                                <a href="../view/partials/autores.php">
                                     <span class="sub-item">Autores</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="charts/charts.html">
+                                <a href="../view/partials/videoManual.php">
                                     <span class="sub-item">Video Manual</span>
                                 </a>
                             </li>
