@@ -19,17 +19,6 @@
                 <input type="date" name="fecha_fin" class="form-control">
             </div>
 
-            <!-- Tipo actividad -->
-            <div class="col-md-4">
-                <label class="form-label">Tipo de actividad</label>
-                <select name="tipo" class="form-select">
-                    <option value="">Seleccione...</option>
-                    <option value="nacimiento">Nacimiento</option>
-                    <option value="muerte">Muerte</option>
-                    <option value="alimentación">Alimentación</option>
-                    <option value="traslado">Traslado</option>
-                </select>
-            </div>
 
             <!-- Zoocriadero -->
             <div class="col-md-4">
@@ -42,11 +31,15 @@
             </div>
 
             <!-- Botón -->
-            <div class="col-md-12 text-end">
-                <button type="submit" class="btn btn-primary">
+           <div class="d-flex justify-content-end gap-1">
+                <button type="submit" class="btn btn-primary btn-sm">
                     Generar Reporte
                 </button>
-            </div>
+
+                <button type="submit" class="btn btn-success btn-sm">
+                    Generar Excel
+                </button>
+            </div>   
 
         </form>
     </div>
@@ -62,10 +55,9 @@
             <table class="table table-bordered table-head-bg-primary mt-3">
                 <thead>
                     <tr>
-                        <th>Fecha</th>
-                        <th>Actividad</th>
                         <th>Zoocriadero</th>
-                        <th>Tanque</th>
+                        <th>Id tanque</th>
+                        <th>Nacidos</th>
                         <th>Muertes hembras</th>
                         <th>Muertes machos</th>
                         <th>Muertes</th>

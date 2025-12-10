@@ -207,7 +207,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="charts/sparkline.html">
+                                <a href="<?php echo getUrl("ReportesNacidosMuertos","ReportesNacidosMuertos","getConsulta")?>">
                                     <span class="sub-item">Nacidos o muertos </span>
                                 </a>
                             </li>

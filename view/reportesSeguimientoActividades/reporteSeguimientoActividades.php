@@ -35,17 +35,20 @@
                 <label class="form-label">Zoocriadero</label>
                 <select name="zoocriadero" class="form-select">
                     <option value="">Todos</option>
-                    <option value="1">Zoocriadero El Edén</option>
-                    <option value="2">Acuarios San Luis</option>
                 </select>
             </div>
 
             <!-- Botón -->
-            <div class="col-md-12 text-end">
-                <button type="submit" class="btn btn-primary">
+            <div class="d-flex justify-content-end gap-1">
+                <button type="submit" class="btn btn-primary btn-sm">
                     Generar Reporte
                 </button>
+
+                <button type="submit" class="btn btn-success btn-sm">
+                    Generar Excel
+                </button>
             </div>
+
 
         </form>
     </div>
@@ -65,7 +68,7 @@
                         <th>Actividad</th>
                         <th>Zoocriadero</th>
                         <th>Tanque</th>
-                        <th>Observaciones</th>
+                        <th>Accciones</th>
                     </tr>
                 </thead>
                 <tbody>
