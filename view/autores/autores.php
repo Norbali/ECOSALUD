@@ -1,5 +1,9 @@
-<h1 class="fw-bold text-center mt-4">Autores</h1>
-<div class="container mt-5">
+<div class="mt-3">
+    <div class="mt-3">
+        <div class="display-4 text-center fw-bold">
+            Autores
+        </div>
+        <div class="mt-5">
 
     <div class="card border-dark mb-4 p-4">
         <div class="row text-center fw-bold">

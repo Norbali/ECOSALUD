@@ -78,21 +78,15 @@
                         <ul class="nav nav-collapse">
                             <li>
                                 <a href="sidebar-style-2.html">
+                                    <a href="<?php echo getUrl("Tanques","Tanques","getCreate")?>">
                                     <span class="sub-item">Registro de tanques</span>
                                 </a>
                             </li>
                             <li>
                                 <a data-bs-toggle="collapse" href="#subConsultarTanques">
+                                    <a href="<?php echo getUrl("Tanques","Tanques","list")?>">
                                     <span class="sub-item">Consultar tanques</span>
                                 </a>
-
-                                <div class="collapse" id="subConsultarTanques">
-                                    <ul class="nav nav-collapse">
-                                        <li><a href="#"><span class="sub-item">Ver Detalle de Tanques</span></a></li>
-                                        <li><a href="#"><span class="sub-item">Editar Tanques</span></a></li>
-                                        <li><a href="#"><span class="sub-item">Inhabilitar Tanques</span></a></li>
-                                    </ul>
-                                </div>
                             </li>
                         </ul>
                     </div>
