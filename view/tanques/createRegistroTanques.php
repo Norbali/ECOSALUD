@@ -33,9 +33,10 @@
 
                         <?php foreach($tipos as $t){ ?>
                             <option value="<?php echo $t['id_tipo_tanque']; ?>">
-                                <?php echo $t['nombre_tipo']; ?>
-                            </option>
+                             <?php echo $t['nombre_tipo_tanque']; ?>
+                         </option>
                         <?php } ?>
+
 
                     </select>
                 </div>
