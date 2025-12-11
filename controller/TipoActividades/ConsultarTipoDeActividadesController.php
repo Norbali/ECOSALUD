@@ -1,17 +1,23 @@
 <?php
-  
-   include_once '../model/TipoActividades/RegistroDeTipoDeActividadesModel.php'; 
-class RegistroDeTiposDeActividadesController{
-        
-       public function getCreate(){
-            $obj = new RegistroDeTipoDeActividadesModel();
-            $sql= "SELECT * FROM estado_actividad";
-            $estados = $obj->select($sql);
-            include_once '../view/tipoActividades/registroTipoDeActividades.php';
-        } 
 
-        public function postCreate(){
-            $obj = new RegistroDeTipoDeActividadesModel();
+include_once '../model/TipoActividades/ConsultarTipoDeActividadesModel.php';
+class ConsultarTipoDeActividadesController{
+        
+       public function getConsulta(){
+            $obj = new ConsultarTipoDeActividadesModel();
+            $sql= "SELECT 
+  a.id_actividad,
+  a.nombre_actividad,
+  ea.nombre_estado_actividades
+FROM actividad a
+JOIN estado_actividad ea
+  ON a.id_estado_actividad = ea.id_estado_actividades;
+";
+            $actividades = $obj->select($sql);
+            include_once '../view/tipoActividades/ConsultarActividades.php';
+        } 
+        public function postConsulta(){
+            $obj = new ConsultarTipoDeActividadesModel();
 
             $id_actividad  = $_POST['id_actividad'];
             $nombre_actividad  = $_POST['nombre_actividad'];
@@ -30,5 +36,6 @@ class RegistroDeTiposDeActividadesController{
                 echo "error en la insercion";
             }
         }
+
     }
 ?>
