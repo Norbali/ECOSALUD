@@ -16,7 +16,7 @@
                         if(isset($_GET['modulo'])){
                             resolve();
                         }else{
-                            session_destroy();
+                            
                         }
                     echo "</div>";
                 echo "</div>";
