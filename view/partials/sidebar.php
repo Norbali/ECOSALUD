@@ -146,7 +146,7 @@
 
             <!-- ESTE ES TU LINK (FUNCIONA) -->
             <li>
-                <a href="/GEOSALUD/view/tipoActividades/RegistroDeActividades.php">
+                <a href="<?php echo getUrl("RegistroDeActividades","RegistroDeActividades","getCreate")?>">
                     <span class="sub-item">Registrar actividad</span>
                 </a>
             </li>
