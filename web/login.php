@@ -2,6 +2,7 @@
 
     include_once '../lib/helpers.php';
 
+
 ?>
 
 <!DOCTYPE html>
@@ -26,27 +27,31 @@
                     <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="120">
                 </a>
             </div>
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?php
+                    echo $_SESSION['error'];
+                    unset($_SESSION['error']);
+                    ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            <?php endif; ?>
 
             <form action="<?php echo getUrl("Acceso","Acceso","login", false, "ajax")?>" method="post">
                 <div class="form-group">
                     <label class=""><b>Documento*</b></label>
-                    <input type="number" class="form-control" id="documento" name="documento">
+                    <input type="text" class="form-control" id="documento" name="documento" minlength="9" maxlength="10" required>
                 </div>
 
                 <div class="form-group">
                     <label class=""><b>Contraseña*</b></label>
-                    <input type="password" class="form-control" id="contraseña" name="contraseña">
+                    <input type="password" class="form-control" id="contraseña" name="contraseña" minlength="8" maxlength="16" required>
                 </div>
 
-                <?php
-                    if(isset($_SESSION['error'])){
-                        echo "<div class='alert alert-danger'>".$_SESSION['error']."</div>";
-                        unset($_SESSION['error']);
-                    }
-                ?>
+                
 
                 <div class="text-center">
-                     <button type="submit"class="btn btn-primary" >Entrar</button>
+                     <button type="submit" class="btn btn-primary" >Entrar</button>
                 </div>
                 </form>
         </div>
@@ -55,5 +60,6 @@
     <script src="assets/js/core/jquery-3.7.1.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap.min.js"></script>
+    
 </body>
 </html>

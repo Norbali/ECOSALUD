@@ -12,59 +12,48 @@
             $contraseña = $_POST['contraseña'];
 
             $validaciones = true;
-            $validacionDocumento = validarDocumento($documento); 
-            $validacionesContraseña = validarContrasena($contrasena);
+            $validacionDocumento = $this->validarDocumento($documento); 
+            $validacionesContraseña = $this->validarContrasena($contraseña);
 
             if($validacionDocumento!="true"){
                 $validaciones=false;
-                $_SESSION['Error'] = $validacionDocumento;
-                
-                if(validarContraseña($contraseña)=="true"){
-                    $validaciones=false;
-                    $_SESSION['Error'] = $validacionesContraseña;
-                }
+                $_SESSION['error'] = $validacionDocumento;
+            }
+
+            if($validacionesContraseña!="true"){
+                $validaciones=false;
+                $_SESSION['error'] = $validacionesContraseña;
             }
             if($validaciones){
-                $sql = "SELECT * FROM usuarios WHERE documento = $documento AND contraseña = '$contraseña'";
-                $usuario = $obj->select($sql);
 
-                if(pg_num_rows($usuario)>0){
-                    //dd ($usuario);
-                    $idRol=0;
-                    while($usu=pg_fetch_assoc($usuario)){
-                        $_SESSION['documento'] = $usu['documento'];
-                        $_SESSION['nombre'] = $usu['nombre'];
-                        $_SESSION['rol'] = $usu['id_rol'];
-                        $_SESSION['auth'] = "ok";
-                        $idRol = $usu['id_rol'];
-                    }
-
-                    //consultar permisos
-                    $sqlPermisos = "
-                        SELECT m.nombre_modulo, a.nombre_accion FROM permisos p
-                        INNER JOIN modulo m ON p.id_modulo = m.id_modulo
-                        INNER JOIN acciones a ON p.id_accion = a.id_accion
-                        WHERE p.id_rol = $idRol 
-                    ";
-
-                    $result = $obj->select($sqlPermisos);
-
-                    $permisos = [];
-                    while ($row = pg_fetch_assoc($result)) {
-                        $modulo = $row['nombre_modulo'];
-                        $accion = $row['nombre_accion'];
-                        $permisos[$row['nombre_modulo']][] = $row['nombre_accion'];
-                    }
-                        $_SESSION['permisos'] = $permisos;
-
-                        redirect("index.php");
-                    
-                }else{
-                    $_SESSION['Error'] = "Credenciales invalidas";
+                if(!$this->validarCredencialDocumento($documento)){
+                    $_SESSION['error'] = "El número documento no está asociado a una cuenta.";
                     redirect("login.php");
+                    return;
                 }
-            }
-                
+
+                if(!$this->validarCredencialContraseña($documento, $contraseña)){
+                    $_SESSION['error'] = "La contraseña incorrecta.";
+                    redirect("login.php");
+                    return;
+                }
+
+                $idRol = $this->obtenerValorCampo($documento, "id_rol");
+
+                $_SESSION['documento'] = $documento;
+                $_SESSION['auth'] = "ok";
+                $_SESSION['nombre'] = $this->obtenerValorCampo($documento, "nombre");
+                $_SESSION['rol'] = $idRol;
+
+                // CARGAR PERMISOS
+                $permisos = $this->cargarPermisos($idRol);
+                $_SESSION['permisos'] = $permisos;
+
+                redirect("index.php");
+
+            }else{
+                redirect("login.php");
+            }        
         }
 
         public function logout(){
@@ -92,7 +81,7 @@
                 $permisos[$row['nombre_modulo']][] = $row['nombre_accion'];
             }
 
-            $_SESSION['permisos'] = $permisos;
+            return $permisos;
             
         }
 
@@ -127,9 +116,9 @@
             }
 
             elseif (strlen($documento) < 9) {
-                $mensaje = "El documento debe tener mínimo 6 dígitos.";
+                $mensaje = "El documento debe tener mínimo 9 dígitos.";
             }
-            // Longitud máxima
+
             elseif (strlen($documento) > 10) {
                 $mensaje = "El documento debe tener máximo 10 dígitos.";
             }
@@ -139,6 +128,48 @@
 
             return $mensaje;
         }
+
+        //validar credenciales
+        public function validarCredencialDocumento($documento){
+            $obj = new AccesoModel();
+
+            $sql = "SELECT * FROM usuarios WHERE documento = '$documento'";
+            $usuario = $obj->select($sql);
+
+            if(pg_num_rows($usuario)>0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        public function validarCredencialContraseña($documento, $contraseña){
+            $obj = new AccesoModel();
+
+            $sql = "SELECT * FROM usuarios WHERE documento = '$documento' AND contrasena = '$contraseña'";
+            $usuario = $obj->select($sql);
+
+            if(pg_num_rows($usuario)>0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        public function obtenerValorCampo($documento, $campo) {
+            $obj = new AccesoModel();
+
+            $sql = "SELECT $campo FROM usuarios WHERE documento = '$documento'";
+            $usuario = $obj->select($sql);
+
+            if (pg_num_rows($usuario) > 0) {
+                $row = pg_fetch_assoc($usuario);
+                return $row[$campo];   // Retorna el valor del campo solicitado
+            } else {
+                return false;
+            }
+        }
+
 
     }
 
