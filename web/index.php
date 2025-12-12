@@ -16,7 +16,7 @@
                         if(isset($_GET['modulo'])){
                             resolve();
                         }else{
-                            
+                            include_once '../view/partials/content.php';
                         }
                     echo "</div>";
                 echo "</div>";

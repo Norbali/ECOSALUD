@@ -7,7 +7,7 @@
 					<div class="logo-header" data-background-color="dark">
 
 						<a href="#" class="logo">
-							<img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="120">
+							<img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="70">
 						</a>
 						
 						<div class="nav-toggle">

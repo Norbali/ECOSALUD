@@ -6,9 +6,9 @@
     <div class="sidebar-logo">
         <!-- Logo  -->
         <div class="logo-header" data-background-color="dark">
-            <div class="text-center ms-3">
-                <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="70">
-            </div>
+            <a href="#" class="logo m-4">
+                <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand px-5" height="70">
+            </a>
             <div class="nav-toggle">
                 <button class="btn btn-toggle toggle-sidebar">
                     <i class="gg-menu-right"></i>
