@@ -42,8 +42,14 @@
 
                 $_SESSION['documento'] = $documento;
                 $_SESSION['auth'] = "ok";
-                $_SESSION['nombre'] = $this->obtenerValorCampo($documento, "nombre");
+                
+                $nombre = $this->obtenerValorCampo($documento, "nombre");
+                $apellido = $this->obtenerValorCampo($documento, "apellido");
+                $_SESSION['nombreCompleto'] =$nombre." ".$apellido;
+                 $_SESSION['nombre'] =$nombre;
+
                 $_SESSION['rol'] = $idRol;
+                $_SESSION['nombreRol'] = $this->obtenerNombreRol($idRol);
 
                 // CARGAR PERMISOS
                 $permisos = $this->cargarPermisos($idRol);
@@ -169,6 +175,21 @@
                 return false;
             }
         }
+
+        public function obtenerNombreRol($idRol) {
+            $obj = new AccesoModel();
+            $sql = "SELECT nombre_rol FROM rol WHERE id_rol = $idRol";
+
+            $resultado = $obj->select($sql);
+
+            if (pg_num_rows($resultado) > 0) {
+                $row = pg_fetch_assoc($resultado);
+                return $row['nombre_rol'];
+            } else {
+                return null; // o "" si prefieres vacío
+            }
+        }
+
 
 
     }

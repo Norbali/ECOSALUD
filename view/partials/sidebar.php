@@ -6,10 +6,9 @@
     <div class="sidebar-logo">
         <!-- Logo  -->
         <div class="logo-header" data-background-color="dark">
-
-            <a href="index.html" class="logo">
-                <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand" height="70">
-            </a>
+            <div class="text-center ms-3">
+                <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="70">
+            </div>
             <div class="nav-toggle">
                 <button class="btn btn-toggle toggle-sidebar">
                     <i class="gg-menu-right"></i>
@@ -28,24 +27,18 @@
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
         <div class="sidebar-content">
             <ul class="nav nav-secondary">
-                <li class="nav-item active">
-                    <a data-bs-toggle="collapse" href="#mapa" class="collapsed" aria-expanded="false">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <p>Mapa</p>
-                    </a>
-                </li>
+               
                 <li class="nav-section">
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>
                     </span>
                     <h4 class="text-section">Módulos</h4>
                 </li>
-                
-                <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#zoocriadero">
-                        <i class="fas fa-building"></i>
-                        <p>Zoocriaderos</p>
-                        <span class="caret"></span>
+
+                <li class="nav-item active">
+                    <a data-bs-toggle="collapse" href="#mapa" class="collapsed" aria-expanded="false">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Mapa</p>
                     </a>
                 </li>
 
@@ -114,7 +107,7 @@
                     </li>
                 <?php }?>
 
-                <?php if (array_key_exists("TiposDeActividad", $permisos)){ ?>
+                <?php if (array_key_exists("TiposDeActividades", $permisos)){ ?>
                     <li class="nav-item">
                         <a data-bs-toggle="collapse" href="#tipoactividades">
                             <i class="fas fa-list-alt"></i>

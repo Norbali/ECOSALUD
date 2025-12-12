@@ -1,8 +1,5 @@
 <?php 
-
     include_once '../lib/helpers.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +20,7 @@
         <div class="container container-login animated fadeIn">
             <h3 class="text-center">Iniciar Sesión</h3>
             <div class="text-center">
-                <a href="index.html" class="logo">
                     <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="120">
-                </a>
             </div>
             <?php if (isset($_SESSION['error'])): ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
