@@ -47,30 +47,6 @@
                         <p>Zoocriaderos</p>
                         <span class="caret"></span>
                     </a>
-                    <div class="collapse" id="zoocriadero">
-                        <ul class="nav nav-collapse">
-                            <li>
-                                <a href="components/avatars.html">
-                                    <span class="sub-item">Avatars</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/buttons.html">
-                                    <span class="sub-item">Buttons</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/gridsystem.html">
-                                    <span class="sub-item">Grid System</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/panels.html">
-                                    <span class="sub-item">Panels</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
 
                 <?php if (array_key_exists("Tanques", $permisos)){ ?>
@@ -110,22 +86,7 @@
                         <a data-bs-toggle="collapse" href="#actividades">
                             <i class="fas fa-pen-square"></i>
                             <p>Seguimiento de tanques</p>
-                            <span class="caret"></span>
                         </a>
-                        <div class="collapse" id="actividades">
-                            <ul class="nav nav-collapse">
-                                <li>
-                                    <a href="tables/tables.html">
-                                        <span class="sub-item">Basic Table</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tables/datatables.html">
-                                        <span class="sub-item">Datatables</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
                 <?php }?>
 
