@@ -5,8 +5,7 @@
         <title>Mapa</title>
 
         <link rel="stylesheet" href="/GEOSALUD/view/mapa/misc/img/dc.css">
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="/GEOSALUD/view/mapa/misc/lib/mscross-1.1.9.js"></script>
 
         <style>
@@ -47,7 +46,7 @@
     </head>
 
     <body>
-        
+
         <div class="mscross"
                 style="overflow:hidden; width: 1000px; height:1000px; -moz-user-select:none; position:relative; border-radius: 2%; margin:0 auto; display:block;" id="dc_main">
         </div>
@@ -106,12 +105,12 @@
         myMap1 = new msMap(document.getElementById("dc_main"), "standardRight");
         myMap1.setCgi("/ms4w/cgi-bin/mapserv.exe");
         myMap1.setMapFile("/ms4w/Apache/htdocs/GEOSALUD/view/mapa/caliregistrar.map");
-        myMap1.setFullExtent(1053867, 1068491, 860190);
+        myMap1.setFullExtent(1053867, 1068491,  860190, 879411);
         myMap1.setLayers("Cali Comunas Barrios Malla_Vial");
 
         myMap2 = new msMap(document.getElementById("dc_main2"));
         myMap2.setActionNone();
-        myMap2.setFullExtent(1053867.55, 1068491.88, 860190.55);
+        myMap2.setFullExtent(1053867, 1068491, 860190, 879411);
         myMap2.setMapFile("/ms4w/Apache/htdocs/GEOSALUD/view/mapa/caliregistrar.map");
         myMap2.setLayers("Cali");
         myMap1.setReferenceMap(myMap2);
