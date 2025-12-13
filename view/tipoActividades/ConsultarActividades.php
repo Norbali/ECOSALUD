@@ -95,28 +95,28 @@
                                             }
                                             ?>
                                         </td>
-                                         <td class="text-center">
-            <div class="d-flex justify-content-center gap-1">
-                <button class="btn btn-info btn-sm"
-                        onclick="verDetalle(<?php echo $actividad['id_actividad']; ?>)">
-                    <i class="fas fa-eye"></i> Ver
-                </button>
+                                        <td class="text-center">
+                                            <div class="d-flex justify-content-center gap-1">
+                                                <button class="btn btn-info btn-sm"
+                                                    onclick="verDetalle(<?php echo $actividad['id_actividad']; ?>)">
+                                                    <i class="fas fa-eye"></i> Ver
+                                                </button>
 
-                <button class="btn btn-warning btn-sm"
-                        onclick="editar(<?php echo $actividad['id_actividad']; ?>)">
-                    <i class="fas fa-edit"></i> Editar
-                </button>
+                                                <button class="btn btn-warning btn-sm"
+                                                    onclick="editar(<?php echo $actividad['id_actividad']; ?>)">
+                                                    <i class="fas fa-edit"></i> Editar
+                                                </button>
 
-                <button class="btn btn-danger btn-sm"
-                        onclick="eliminar(<?php echo $actividad['id_actividad']; ?>)">
-                    <i class="fas fa-trash"></i> Inhabilitar
-                </button>
-            </div>
+                                                <button class="btn btn-danger btn-sm"
+                                                    onclick="eliminar(<?php echo $actividad['id_actividad']; ?>)">
+                                                    <i class="fas fa-trash"></i> Inhabilitar
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>
 
-                               
+
                             </tbody>
                         </table>
                     </div>
@@ -191,7 +191,7 @@
                         <div class="col-8" id="detalleFecha">11/12/2024</div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -234,7 +234,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/funcionesModalTipoActividades.js"></script>
+    <script src="assets/js/funcionesModalTipoActividades.js"></script>
 
 </body>
 <script src="assets/js/funcionesModalTipoActividades.js"></script>
