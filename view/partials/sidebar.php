@@ -36,7 +36,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a data-bs-toggle="collapse" href="#mapa" class="collapsed" aria-expanded="false">
+                    <a href="<?php echo getUrl("Mapa","Mapa","vistaMapa")?>" class="collapsed" aria-expanded="false">
                         <i class="fas fa-map-marked-alt"></i>
                         <p>Mapa</p>
                     </a>
