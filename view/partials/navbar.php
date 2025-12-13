@@ -51,7 +51,7 @@
 										</li>
 										<li>
 											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="<?php echo getUrl("Acceso","Acceso","logout")?>">Cerrar Sesión</a>
+											<a class="dropdown-item" href="<?php echo getUrl("Acceso","Acceso","logout")?>">Cerrar Sesi&oacute;n</a>
 										</li>
 									</div>
 								</ul>

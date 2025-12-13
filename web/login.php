@@ -18,7 +18,7 @@
 <body class="login">
     <div class="wrapper wrapper-login">
         <div class="container container-login animated fadeIn">
-            <h3 class="text-center">Iniciar Sesión</h3>
+            <h3 class="text-center">Iniciar Sesi&oacute;n</h3>
             <div class="text-center">
                     <img src="assets/img/logoGEOSALUD.png" alt="navbar brand" class="navbar-brand m-5" height="120">
             </div>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class=""><b>Contraseña*</b></label>
+                    <label class=""><b>Contrase&ntilde;a*</b></label>
                     <input type="password" class="form-control" id="contraseña" name="contraseña" minlength="8" maxlength="16" required>
                 </div>
 

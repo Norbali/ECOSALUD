@@ -99,15 +99,15 @@
             $mensaje = "";
 
             if (strlen($contrasena) < 8) {
-                $mensaje = "Debe tener mínimo 8 caracteres.";
+                $mensaje = "Debe tener m&iacute;nimo 8 caracteres.";
             } elseif (!preg_match('/[A-Z]/', $contrasena)) {
-                $mensaje = "Debe contener al menos una mayúscula.";
+                $mensaje = "Debe contener al menos una may&uacute;scula.";
             } elseif (!preg_match('/[a-z]/', $contrasena)) {
-                $mensaje = "Debe contener al menos una minúscula.";
+                $mensaje = "Debe contener al menos una min&uacute;scula.";
             } elseif (!preg_match('/\d/', $contrasena)) {
-                $mensaje = "Debe contener al menos un número.";
+                $mensaje = "Debe contener al menos un n&uacute;mero.";
             } elseif (!preg_match('/[\W_]/', $contrasena)) {
-                $mensaje = "Debe contener al menos un carácter especial.";
+                $mensaje = "Debe contener al menos un car&aacute;cter especial.";
             } else {
                 $mensaje = "true";
             }
@@ -121,15 +121,15 @@
             }
             
             elseif (!preg_match('/^[0-9]+$/', $documento)) {
-                $mensaje = "El documento solo debe contener números.";
+                $mensaje = "El documento solo debe contener n&uacute;meros.";
             }
 
             elseif (strlen($documento) < 9) {
-                $mensaje = "El documento debe tener mínimo 9 dígitos.";
+                $mensaje = "El documento debe tener m&iacute;nimo 9 d&iacute;gitos.";
             }
 
             elseif (strlen($documento) > 10) {
-                $mensaje = "El documento debe tener máximo 10 dígitos.";
+                $mensaje = "El documento debe tener m&aacute;ximo 10 d&iacute;gitos.";
             }
             else {
                 $mensaje = "true";
@@ -189,7 +189,7 @@
                 $row = pg_fetch_assoc($resultado);
                 return $row['nombre_rol'];
             } else {
-                return null; // o "" si prefieres vacío
+                return null; 
             }
         }
 
